@@ -7,6 +7,7 @@ node_modules
 
 # testing
 /web-app/coverage
+*.tmp
 
 # production
 /web-app/build

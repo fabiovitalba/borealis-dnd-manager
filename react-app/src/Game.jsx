@@ -22,6 +22,7 @@ class Game extends React.Component {
     this.fogRef = React.createRef();
     this.drawRef = React.createRef();
     this.overlayRef = React.createRef();
+    this.tokens = React.createRef();
     this.state = {
       maps: {},
       tokens: [],
@@ -370,7 +371,9 @@ class Game extends React.Component {
 
   fromJson (json) {
     const data = Object.assign(JSON.parse(json)||{});
-    data.tokens.forEach(token => { if (!token.guid) token.guid = guid() });
+    if (data.tokens) {
+      data.tokens.forEach(token => { if (!token.guid) token.guid = guid() });
+    }
     return new Promise(resolve => {
       this.setState(data, () => this.loadMap().then(resolve));
     });

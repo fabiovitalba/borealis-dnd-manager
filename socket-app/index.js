@@ -11,7 +11,7 @@ const SOCKET_SERVER_PORT = 8000;
 const fs = require('fs');
 
 /* Write pid file*/
-fs.writeFile('pid.tmp', process.pid, err => {
+fs.writeFile('pid.tmp', process.pid.toString(), err => {
 	if (err) return console.log(err);
 	console.log(`process id ${process.pid}`);
 });

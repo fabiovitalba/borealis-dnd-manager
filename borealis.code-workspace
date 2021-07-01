@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "react-app"
+		},
+		{
+			"path": "socket-app"
+		}
+	],
+	"settings": {}
+}
